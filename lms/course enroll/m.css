@@ -1,0 +1,90 @@
+body{
+  margin:0;
+  padding:0;
+  background-color: #1d1f20;
+
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.card{
+  position: relative;
+  background-color: #e4f1f7;
+  text-align: center;
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.card:hover{
+  background-color: #f96363;
+}
+
+
+.card .triangle{
+  position: absolute;
+  width:0;
+  height:0;
+  border-top: 60px solid #f96363;
+  border-right: 60px solid transparent;
+}
+
+main .card:nth-child(3) .triangle{
+  display: none;
+}
+
+.card .triangle span{
+  position: absolute;
+  font-family: sans-serif;
+  color:white;
+  text-transform: uppercase;
+  top: -48px;
+  left : 1px;
+  transform: rotate(-45deg);
+}
+
+.card .title{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 20% 0 10px;
+  color: #337394;
+}
+
+.card #enroll{
+  display: none;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card:hover .triangle,
+.card:hover #title,
+.card:hover img{
+  display: none;
+}
+
+.card:last-child:hover .title{
+  display: block;
+}
+
+.card:hover #enroll{
+  display: initial;
+}
+
+.card img{
+   width: 50px;
+}
+
+.card:last-child .title{
+  display: none;
+}
+
+.card:last-child img{
+   width:200px;
+}
