@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 app.use(require("./users"));
+app.use(require("./courses"));
 
 
 //Allow Mongoose to connect to our local MongoDB instance.
